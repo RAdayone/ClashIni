@@ -1,18 +1,12 @@
 /********************************
-Membership unlock for VSCO & Fileball & 1Blocker
-Please note that you may need to reinstall app for script to work.
-
 QuantumultX rewrite link:
-https://raw.githubusercontent.com/RAdayone/QuantumultX/main/files/vsco_fileball.js
-
-Please note that the above rewrite link requires open KOP-XIAO's resource parser
-
+https://raw.githubusercontent.com/RAdayone/QuantumultX/main/files/fileball.js
 *********************************
 Surge4, Loon and Shadowrocket configuration:
 
 [Script]
-http-request ^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js
-http-response ^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/ requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js
+http-request ^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/ script-path=https://raw.githubusercontent.com/RAdayone/QuantumultX/main/files/fileball.js
+http-response ^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/ requires-body=1,script-path=https://raw.githubusercontent.com/RAdayone/QuantumultX/main/files/fileball.js
 
 [MITM]
 hostname = api.revenuecat.com
@@ -22,10 +16,8 @@ const resp = {};
 const obj = JSON.parse(typeof $response != "undefined" && $response.body || null);
 const ua = $request.headers['User-Agent'] || $request.headers['user-agent'];
 const list = {
-	'VSCO': { name: 'membership', id: 'com.circles.fin.premium.yearly' },
 	'Filebox': { name: 'filebox_pro', id: 'com.premium.yearly' },
 	'Fileball': { name: 'filebox_pro', id: 'com.premium.yearly' },
-	'1Blocker': { name: 'premium', id: 'blocker.ios.subscription.yearly' }
 };
 const data = {
 	"expires_date": "2030-02-18T07:52:54Z",
