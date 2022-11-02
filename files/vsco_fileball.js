@@ -3,7 +3,7 @@ Membership unlock for VSCO & Fileball & 1Blocker
 Please note that you may need to reinstall app for script to work.
 
 QuantumultX rewrite link:
-https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js
+https://raw.githubusercontent.com/RAdayone/QuantumultX/main/files/vsco_fileball.js
 
 Please note that the above rewrite link requires open KOP-XIAO's resource parser
 
